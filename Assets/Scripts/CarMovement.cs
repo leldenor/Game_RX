@@ -23,8 +23,6 @@ public class CarMovement : MonoBehaviour
     {
         currentSpeed = acceleration * Input.GetAxis("Vertical");
 
-        if ()
-
         if (Input.GetKey(KeyCode.Space))
            currentBreakForce = breakForce;
         else
