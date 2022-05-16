@@ -5,11 +5,7 @@ using UnityEngine;
 public class CameraFollowCar : MonoBehaviour
 {
     public Transform car;
-    Vector3 offSet;
-    public float z;
 
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         Vector3 localOffset = car.transform.up * 3f - car.transform.forward * 6f;

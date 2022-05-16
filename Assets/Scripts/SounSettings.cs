@@ -5,18 +5,23 @@ using UnityEngine.UI;
 
 public class SounSettings : MonoBehaviour
 {
-
+    private AudioManager audioManager;
+    void Start()
+    {
+        audioManager = AudioManager.instance;
+        audioManager.Play("Motor");
+    }
     public void ToggleValueChanged(Toggle change)
     {
-        print(change.isOn);
+        FindObjectOfType<PlayerScript>().Dance(change.isOn);
         if (change.isOn)
         {
             //AudioListener.volume = 1;
-            GameObject.FindObjectOfType<AudioManager>().Play("Motor");
+            audioManager.Play("Motor");
         }
         else
         {
-            GameObject.FindObjectOfType<AudioManager>().Stop("Motor");
+            audioManager.Stop("Motor");
             //AudioListener.volume = 0;
         }
         

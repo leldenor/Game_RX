@@ -14,14 +14,21 @@ public class StartMenu : MonoBehaviour
     }
     public void click(GameObject g)
     {
-        print(g.name);
         if (g.name == "PlayButton")
         {
-            SceneManager.LoadScene("Race");
+            FindObjectOfType<PlayerScript>().Run();
+            StartCoroutine(DelaySceneLoad());
         }
         if (g.name == "SettingsButton")
         {
+            FindObjectOfType<PlayerScript>().Dance(true);
             soundOn.gameObject.SetActive(true);
         }
+    }
+
+    IEnumerator DelaySceneLoad()
+    {
+        yield return new WaitForSeconds(1f); // Wait 1 seconds
+        SceneManager.LoadScene("Race"); // Change to the ID or Name of the scene to load
     }
 }
