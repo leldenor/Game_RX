@@ -16,13 +16,11 @@ public class SounSettings : MonoBehaviour
         FindObjectOfType<PlayerScript>().Dance(change.isOn);
         if (change.isOn)
         {
-            //AudioListener.volume = 1;
             audioManager.Play("Motor");
         }
         else
         {
             audioManager.Stop("Motor");
-            //AudioListener.volume = 0;
         }
         
     }
