@@ -8,6 +8,7 @@ public class ScoreUI : MonoBehaviour
 {
     public ScoreManager scoreManager;
     public RowUi rowUi;
+    
     // Start is called before the first frame update
     void Start()
     {

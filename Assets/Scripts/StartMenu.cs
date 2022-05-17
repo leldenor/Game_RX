@@ -29,6 +29,6 @@ public class StartMenu : MonoBehaviour
     IEnumerator DelaySceneLoad()
     {
         yield return new WaitForSeconds(1f); // Wait 1 seconds
-        SceneManager.LoadScene("Race"); // Change to the ID or Name of the scene to load
+        SceneManager.LoadScene("Race");
     }
 }

@@ -13,7 +13,6 @@ public class ScoreManager : MonoBehaviour
 {
     private MyList scores;
 
-    // Start is called before the first frame update
     void Awake()
     {
         var json = PlayerPrefs.GetString("Scores", "[]");
